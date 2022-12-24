@@ -1,26 +1,18 @@
-const inputElm = document.querySelector("#validation-input");
-inputElm.addEventListener("blur", onBlur);
+const inputRef = document.querySelector("#validation-input");
 
-function onBlur(event) {
-  const input = event.currentTarget;
-  const inputLength = Number(input.dataset.length);
+const onvalidation = () => {
+inputRef.classList.remove('valid', 'invalid');
 
-  if (input.value.length === inputLength) {
-    inputChenge();
-  } else {
-    elseInputChange();
+let classRef = 'invalid'
+if (inputRef.value.length === Number(inputRef.dataset.length)) {
+  classRef = 'valid';
+}
+
+inputRef.classList.add(classRef);
+
   }
-}
- 
-function inputChenge() {
-input.classList.remove("invalid");
-    input.classList.add("valid");
-}
-function elseInputChange() {
-  input.classList.remove("valid");
-    input.classList.add("invalid");
-}
-
+  
+  inputRef.addEventListener("blur", onvalidation);
 
 
 

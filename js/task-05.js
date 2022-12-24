@@ -1,7 +1,8 @@
-const input = document.querySelector('#name-input');
-const span = document.querySelector('#name-output');
+const inputRef = document.querySelector('#name-input');
+const spanRef = document.querySelector('#name-output');
 
-input.addEventListener('input', onInputChange);
+
+inputRef.addEventListener('input', onInputChange);
 
 function onInputChange (event) {
 
